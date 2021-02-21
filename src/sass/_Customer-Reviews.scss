@@ -11,7 +11,6 @@
   font-size: 14px;
   line-height: 1.86;
   color: #000;
-
 }
 .customer-img {
   margin-left: auto;
@@ -31,9 +30,6 @@
   border-radius: 50%;
 }
 .customer-dots:not(:last-child) {
-
-
-=======
   margin-right: 10px;
 }
 
@@ -59,9 +55,7 @@ ul {
   background-color: #fafafa;
   padding: 44px 50px 16px;
 
-
   margin-bottom: 31px;
-
 }
 
 .slider-text {
@@ -153,7 +147,6 @@ ul {
     padding: 0 4px;
   }
 
-
   //   font-size: 14px;
   //   line-height: 1.86;
   //   color: #000;
@@ -180,10 +173,8 @@ ul {
   }
 }
 
-  .slider-text::before {
-    position: absolute;
-    top: -15px;
-    left: -31px;
-  }
+.slider-text::before {
+  position: absolute;
+  top: -15px;
+  left: -31px;
 }
-
