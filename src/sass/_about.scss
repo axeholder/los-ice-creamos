@@ -129,7 +129,7 @@
 
     color: $color-button-text;
     background-color: $color-button-bg-light;
-    border: 1px solid $color-button-bg-dark;
+    border: 1px solid transparent;
     border-radius: 22px;
 
     font-family: $font-family-basic;
@@ -357,7 +357,7 @@
   margin: 0 0 10px auto;
 
   cursor: pointer;
-  border: 1px solid $color-button-bg-dark;
+  border: 1px solid transparent;
 
   background-color: transparent;
   transition: transform $function-cubic $function-time;
