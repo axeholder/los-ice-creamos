@@ -2,6 +2,9 @@
 font-family: 'DM Sans', sans-serif;
 font-family: 'Titan One', cursive;
 */
+body.modal-open-products-modal {
+  overflow: hidden;
+}
 
 .list {
   padding: 0;
@@ -191,6 +194,7 @@ font-family: 'Titan One', cursive;
   height: 252px;
 
   background-image: url(../images/products/products-pic1-mobile.png);
+  background-size: contain;
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -239,6 +243,7 @@ font-family: 'Titan One', cursive;
   height: 252px;
 
   background-image: url(../images/products/products-pic2-mobile.png);
+  background-size: contain;
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -287,6 +292,7 @@ font-family: 'Titan One', cursive;
   height: 252px;
 
   background-image: url(../images/products/products-pic3-mobile.png);
+  background-size: contain;
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -502,20 +508,16 @@ font-family: 'Titan One', cursive;
 
   fill: $card-button-light;
 
-
-
   cursor: pointer;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 
   &:hover,
   &:focus {
     background-color: $card-button-accent;
   }
 }
-
 
 /* Стили модальных окон */
 
@@ -592,6 +594,7 @@ font-family: 'Titan One', cursive;
   background-size: cover;
   background-position: top;
   background-image: url(../images/products/products-pic1-mobile.png);
+  background-size: contain;
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -626,8 +629,6 @@ font-family: 'Titan One', cursive;
   left: 50%;
   top: -100px;
 
-
-
   transform: translateX(-50%);
 
   width: 149px;
@@ -636,6 +637,7 @@ font-family: 'Titan One', cursive;
   background-size: cover;
   background-position: top;
   background-image: url(../images/products/products-pic2-mobile.png);
+  background-size: contain;
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -678,6 +680,7 @@ font-family: 'Titan One', cursive;
   background-size: cover;
   background-position: top;
   background-image: url(../images/products/products-pic3-mobile.png);
+  background-size: contain;
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -705,15 +708,11 @@ font-family: 'Titan One', cursive;
 
   &:hover,
   &:focus {
-
-    background-color: $card-button-accent;
-
     background-color: $color-button-bg-dark;
   }
   &:hover .products-modal-icon-cross,
   &:focus .products-modal-icon-cross {
     fill: $color-button-bg-light;
-
   }
 }
 
@@ -740,8 +739,5 @@ font-family: 'Titan One', cursive;
   @media screen and (min-width: 1280px) {
     line-height: 1.92;
     letter-spacing: $font-spacing-basic;
-
-
   }
 }
-

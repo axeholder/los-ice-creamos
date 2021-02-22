@@ -11,6 +11,7 @@
     refs.backdrop.addEventListener("click", logBackdropClick);
 
     function toggleModal() {
+        document.body.classList.toggle("modal-open-products-modal");
         refs.backdrop.classList.toggle("is-hidden");
     }
 
