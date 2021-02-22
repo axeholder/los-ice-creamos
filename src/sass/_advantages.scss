@@ -1,21 +1,10 @@
 /*временные общие стили*/
-.list {
-  padding: 0px;
-  margin: 0px;
-  list-style: none;
-}
+
 h1,
 h2,
 h3,
 p {
   margin: 0px;
-}
-.visually__hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
 }
 
 /*стили секции*/
