@@ -27,8 +27,9 @@ img {
 
 .hero {
   &__section {
-    background-color: #ffb8ca;
-    color: #ffffff;
+    background-color: $hero-bg-color;
+    color: $hero-main-text-color;
+    overflow: hidden;
   }
 
   &__container {
@@ -39,16 +40,13 @@ img {
     z-index: 0;
 
     height: 502px;
-    overflow: hidden;
 
     @media (min-width: $width-mobile) and (max-width: ($width-tablet)-1px) {
       width: $width-mobile;
-      overflow: unset;
     }
 
     @media (min-width: $width-tablet) and (max-width: ($width-desktop)-1px) {
       width: $width-tablet;
-      overflow: unset;
     }
 
     @media (min-width: $width-tablet) {
@@ -69,12 +67,11 @@ img {
 // заголовок
 .hero {
   &__title {
-    font-family: Titan One;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 26px;
+    font-family: $font-family-title;
+    font-weight: $font-weight-normal;
+    font-size: $lable-size-secondary;
     line-height: 1.15;
-    letter-spacing: 0.04em;
+    letter-spacing: $font-spacing-basic;
     text-transform: uppercase;
     text-align: left;
 
@@ -83,16 +80,15 @@ img {
     margin-top: 193px;
 
     @media (min-width: $width-tablet) {
-      // margin-right: 572px;
       margin-top: 102px;
       width: 162px;
 
-      font-size: 22px;
+      font-size: $hero-title-size-tab;
       line-height: 1.14;
     }
 
     @media (min-width: $width-desktop) {
-      font-size: 38px;
+      font-size: $hero-title-size-dsktp;
       line-height: 1.16;
 
       // margin-right: 888px;
@@ -102,23 +98,22 @@ img {
   }
 
   &__text {
-    font-family: Titan One;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 48px;
+    font-family: $font-family-title;
+    font-weight: $font-weight-normal;
+    font-size: $title-size-secondary;
     line-height: 0.96;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: #d41443;
+    color: $color-title-basic;
 
     @media (min-width: $width-tablet) {
-      font-size: 34px;
+      font-size: $title-size-basic;
       line-height: 0.91;
-      letter-spacing: 0.04em;
+      letter-spacing: $font-spacing-basic;
     }
 
     @media (min-width: $width-desktop) {
-      font-size: 58px;
+      font-size: $title-size-tertiary;
       line-height: 0.91;
     }
   }
@@ -135,7 +130,7 @@ img {
     width: 345px;
     height: 345px;
     border-radius: 50%;
-    background-color: #ffa5ba;
+    background-color: $hero-sec-bg-color;
 
     @media (min-width: $width-tablet) {
       top: 31px;
@@ -192,26 +187,25 @@ img {
     border: none;
     padding: 7px 15px;
 
-    font-family: DM Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 8px;
+    font-family: $font-family-basic;
+    font-weight: $font-weight-normal;
+    font-size: $hero-button-text-size;
     line-height: 1.25;
 
-    background-color: #d41443;
-    color: #ffffff;
+    background-color: $hero-button-bg-color;
+    color: $hero-main-text-color;
     margin-right: 8px;
 
-    transition: all 250ms $function-cubic;
+    transition: all $function-time $function-cubic;
 
     &:hover,
     &:focus {
-      background-color: #c7133e;
+      background-color: $card-button-accent;
       cursor: pointer;
     }
 
     @media (min-width: $width-desktop) {
-      font-size: 14px;
+      font-size: $text-size-secondary;
       line-height: 1.3;
       padding: 11px 22px;
       margin-right: 15px;
@@ -223,25 +217,24 @@ img {
     border: none;
     padding: 7px 15px;
 
-    font-family: DM Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 8px;
+    font-family: $font-family-basic;
+    font-weight: $font-weight-normal;
+    font-size: $hero-button-text-size;
     line-height: 1.25;
 
-    background-color: #ffffff;
-    color: #d41443;
+    background-color: $color-bg-secondary;
+    color: $color-button-text;
 
-    transition: all 250ms $function-cubic;
+    transition: all $function-time $function-cubic;
 
     &:hover,
     &:focus {
-      background-color: #ecebeb;
+      background-color: $color-button-bg-medium;
       cursor: pointer;
     }
 
     @media (min-width: $width-desktop) {
-      font-size: 14px;
+      font-size: $text-size-secondary;
       line-height: 1.3;
       padding: 11px 22px;
     }
@@ -298,7 +291,7 @@ img {
     height: 16px;
     width: 16px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: $hero-trip-bg-color;
 
     @media (min-width: $width-desktop) {
       height: 30px;
@@ -307,23 +300,22 @@ img {
   }
 
   &-title {
-    font-family: Titan One;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 28px;
+    font-family: $font-family-title;
+    font-weight: $font-weight-normal;
+    font-size: $hero-info-font-size;
     line-height: 1.14;
 
     text-align: right;
-    letter-spacing: 0.04em;
+    letter-spacing: $font-spacing-basic;
     text-transform: uppercase;
 
-    color: #d41443;
+    color: $color-title-basic;
 
     margin-top: 2px;
     margin-right: 10px;
 
     @media (min-width: $width-desktop) {
-      font-size: 46px;
+      font-size: $hero-sec-info-font-size;
       line-height: 1.15;
       margin-top: 4px;
       margin-right: 18px;
@@ -331,20 +323,19 @@ img {
   }
 
   &-text {
-    font-family: DM Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 8px;
+    font-family: $font-family-basic;
+    font-weight: $font-weight-normal;
+    font-size: $hero-button-text-size;
     line-height: 1.25;
     text-align: right;
 
-    color: #ffffff;
+    color: $hero-main-text-color;
 
     margin-top: 0px;
     margin-right: 10px;
 
     @media (min-width: $width-desktop) {
-      font-size: 14px;
+      font-size: $text-size-secondary;
       line-height: 1.3;
       margin-top: 2px;
       margin-right: 18px;
@@ -374,23 +365,22 @@ img {
   }
 
   &-title {
-    font-family: Titan One;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 28px;
+    font-family: $font-family-title;
+    font-weight: $font-weight-normal;
+    font-size: $hero-info-font-size;
     line-height: 1.14;
 
     text-align: right;
-    letter-spacing: 0.04em;
+    letter-spacing: $font-spacing-basic;
     text-transform: uppercase;
 
-    color: #d41443;
+    color: $color-title-basic;
 
     margin-top: 1px;
     margin-right: 8px;
 
     @media (min-width: $width-desktop) {
-      font-size: 46px;
+      font-size: $hero-sec-info-font-size;
       line-height: 1.15;
       margin-top: 4px;
       margin-right: 18px;
@@ -398,20 +388,19 @@ img {
   }
 
   &-text {
-    font-family: DM Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 8px;
+    font-family: $font-family-basic;
+    font-weight: $font-weight-normal;
+    font-size: $hero-button-text-size;
     line-height: 1.25;
     text-align: right;
 
-    color: #ffffff;
+    color: $hero-main-text-color;
 
     margin-top: 0px;
     margin-right: 10px;
 
     @media (min-width: $width-desktop) {
-      font-size: 14px;
+      font-size: $text-size-secondary;
       line-height: 1.3;
       margin-top: 2px;
       margin-right: 18px;
@@ -444,18 +433,17 @@ img {
   }
 
   &-text {
-    font-family: DM Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 8px;
+    font-family: $font-family-basic;
+    font-weight: $font-weight-normal;
+    font-size: $hero-button-text-size;
     line-height: 1.5;
-    letter-spacing: 0.04em;
+    letter-spacing: $font-spacing-basic;
     width: 114px;
 
     @media (min-width: $width-desktop) {
       width: 200px;
 
-      font-size: 14px;
+      font-size: $text-size-secondary;
       line-height: 1.4;
     }
   }
@@ -479,7 +467,7 @@ img {
 
   fill: $card-button-light;
 
-  transition: all 250ms $function-cubic;
+  transition: all $function-time $function-cubic;
 
   @media (min-width: $width-desktop) {
     width: 26px;
