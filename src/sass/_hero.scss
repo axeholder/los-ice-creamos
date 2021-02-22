@@ -1,3 +1,4 @@
+// общие
 ul {
   list-style: none;
   margin-top: 0;
@@ -60,9 +61,13 @@ img {
       padding-left: 115px;
       padding-right: 115px;
       height: 665px;
+      width: 1280px;
     }
   }
+}
 
+// заголовок
+.hero {
   &__title {
     font-family: Titan One;
     font-style: normal;
@@ -74,7 +79,7 @@ img {
     text-align: left;
 
     width: 218px;
-    margin-right: auto;
+    margin-left: 0;
     margin-top: 193px;
 
     @media (min-width: $width-tablet) {
@@ -117,12 +122,10 @@ img {
       line-height: 0.91;
     }
   }
+}
 
-  &__main-plane {
-    position: absolute;
-    z-index: 1;
-  }
-
+// главная картинка и круг
+.hero {
   &__circle {
     position: absolute;
     z-index: 0;
@@ -155,6 +158,8 @@ img {
     top: 92px;
     right: 32px;
 
+    transition: all 500ms linear;
+
     @media (min-width: $width-tablet) {
       top: 62px;
       right: 247px;
@@ -169,7 +174,10 @@ img {
       height: 557px;
     }
   }
+}
 
+// кнопки
+.hero {
   &__buttons {
     display: flex;
     margin-top: 19px;
@@ -194,6 +202,14 @@ img {
     color: #ffffff;
     margin-right: 8px;
 
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background-color: #c7133e;
+      cursor: pointer;
+    }
+
     @media (min-width: $width-desktop) {
       font-size: 14px;
       line-height: 1.3;
@@ -216,15 +232,23 @@ img {
     background-color: #ffffff;
     color: #d41443;
 
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background-color: #ecebeb;
+      cursor: pointer;
+    }
+
     @media (min-width: $width-desktop) {
       font-size: 14px;
       line-height: 1.3;
       padding: 11px 22px;
-      margin-right: 15px;
     }
   }
 }
 
+// дувушка с моржом
 .hero__content-girl {
   @media (max-width: ($width-tablet)-1px) {
     display: none;
@@ -241,7 +265,10 @@ img {
       right: 109px;
     }
   }
+}
 
+// инфо циферки
+.hero {
   &__info {
     @media (max-width: ($width-tablet)-1px) {
       display: none;
@@ -392,6 +419,7 @@ img {
   }
 }
 
+// ковшик
 .hero__content-ladle {
   width: 100%;
   @media (max-width: ($width-tablet)-1px) {
@@ -433,18 +461,51 @@ img {
   }
 }
 
+// стрелочка у ковшика
 .hero__button-arrow {
   border: none;
-  background-color: transparent;
-  padding-left: 0;
-  padding-right: 0;
+  border-radius: 50%;
+  padding: 0;
+
   margin-top: 7px;
   margin-bottom: 6px;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 18px;
+
+  background-color: $card-button-primary;
+
+  fill: $card-button-light;
+
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media (min-width: $width-desktop) {
+    width: 26px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $card-button-accent;
+    cursor: pointer;
+  }
 }
 
-.hero_arrow {
+// вспомогательная дичь
+.hero {
+  &__main-plane {
+    position: absolute;
+    z-index: 1;
+  }
+}
+.hero_svg {
   @media (min-width: $width-desktop) {
     height: 26px;
     width: 26px;
   }
+}
+
+.hero_link {
+  cursor: auto;
 }
