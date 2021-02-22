@@ -4,12 +4,14 @@
   display: block;
 }
 .personal-data {
+
   font-family: $font-family-basic;
   font-weight: $font-weight-medium;
   font-style: normal;
   font-size: $text-size-secondary;
   line-height: 1.86;
   color: $color-text-secondary;
+
 }
 .customer-img {
   margin-left: auto;
@@ -25,12 +27,14 @@
 .customer-dots {
   width: 4px;
   height: 4px;
+
   background-color: $color-title-basic;
   border-radius: 50%;
 }
 .customer-dots:not(:last-child) {
   margin-right: 10px;
 }
+
 body {
   margin: 0;
 }
@@ -54,6 +58,7 @@ ul {
   margin-bottom: 31px;
 }
 .slider-text {
+
   font-family: $font-family-basic;
   font-weight: $font-weight-medium;
   font-size: $text-size-basic;
@@ -69,6 +74,7 @@ ul {
   position: relative;
   z-index: 2;
 }
+
 .slider-text::before {
   background-image: url('../icons/icon-quotes.svg');
   width: 54px;
@@ -130,6 +136,7 @@ ul {
     line-height: 1.86;
     padding: 0 4px;
   }
+
   .slider-text::before {
     position: absolute;
     top: -15px;
