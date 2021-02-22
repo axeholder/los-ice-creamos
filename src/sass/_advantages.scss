@@ -12,7 +12,7 @@ p {
   min-width: 320px;
   width: 100%;
   padding-bottom: 97px;
-  background-color: rgba(255, 245, 246, 1);
+  background-color: $color-bg-primary;
 }
 .advantages__conteiner {
   min-width: 320px;
@@ -64,42 +64,42 @@ p {
   }
 }
 .advantages__title {
-  font-family: Titan One;
+  font-family: $font-family-title;
   font-style: normal;
-  font-weight: normal;
+  font-weight: $font-weight-normal;
   font-size: 36px;
   line-height: 1.14;
-  letter-spacing: 0.04em;
+  letter-spacing: $font-spacing-basic;
   text-transform: uppercase;
 
-  color: #d41443;
+  color: $color-title-basic;
 
   @media screen and (min-width: 768px) and (max-width: 1279px) {
-    font-size: 48px;
+    font-size: $title-size-secondary;
     margin-bottom: 13px;
   }
 
   @media screen and (min-width: 1280px) {
-    font-size: 58px;
+    font-size: $title-size-tertiary;
     margin-bottom: 15px;
   }
 }
 .advantages__text {
-  font-family: DM Sans;
+  font-family: $font-family-basic;
   font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
+  font-weight: $font-weight-bold;
+  font-size: $text-size-basic;
   line-height: 1.67;
 
-  color: #000000;
+  color: $color-text-secondary;
 
   @media screen and (min-width: 768px) and (max-width: 1279px) {
-    font-size: 14px;
+    font-size: $text-size-secondary;
     line-height: 1.7;
   }
 
   @media screen and (min-width: 1280px) {
-    font-size: 16px;
+    font-size: $text-size-tertiary;
     line-height: 1.75;
     letter-spacing: 0.02em;
   }
