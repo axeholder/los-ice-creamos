@@ -10,6 +10,8 @@
   font-size: $text-size-secondary;
   line-height: 1.86;
   color: $color-text-secondary;
+  display: inline-block;
+  margin-bottom: 30px;
 }
 .customer-img {
   margin-left: auto;
@@ -81,6 +83,16 @@ ul {
   top: -7%;
   z-index: -1;
 }
+.slick-dots button {
+  font-size: 0;
+  width: 13px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: $slider-dots-color;
+  border: none;
+  outline: none;
+  display: block;
+}
 @media screen and (min-width: $width-mobile) {
   .customer-reviews {
     width: $width-mobile;
@@ -116,6 +128,15 @@ ul {
     position: absolute;
     top: -15px;
     left: -22px;
+  }
+  .slick-dots button {
+    margin-top: 0;
+  }
+  .personal-data {
+    margin-bottom: 35px;
+  }
+  .slick-dots {
+    display: block;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -163,18 +184,16 @@ ul {
   display: flex;
   justify-content: center;
 }
+.slider .slick-dots li {
+  height: 12px;
+
+  text-align: center;
+  display: block;
+}
 .slider .slick-dots li:not(:last-child) {
   margin-right: 10px;
 }
-.slick-dots button {
-  font-size: 0;
-  width: 13px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: $slider-dots-color;
-  border: none;
-  outline: none;
-}
+
 .slick-active button {
   background-color: $card-dots-white;
   background-image: url(../icons/home1.svg);
