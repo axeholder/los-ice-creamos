@@ -140,3 +140,45 @@ ul {
     left: -31px;
   }
 }
+.slider {
+  position: relative;
+}
+.slider .slick-arrow {
+  position: absolute;
+  top: 50px;
+  z-index: 5;
+}
+.slick-prev {
+  left: 0;
+  font-size: 0;
+}
+.slick-next {
+  right: 0;
+  font-size: 0;
+}
+.slider__item {
+  outline: none;
+}
+.slider .slick-dots {
+  display: flex;
+  justify-content: center;
+}
+.slider .slick-dots li:not(:last-child) {
+  margin-right: 10px;
+}
+.slick-dots button {
+  font-size: 0;
+  width: 13px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: $slider-dots-color;
+  border: none;
+  outline: none;
+}
+.slick-active button {
+  background-color: $card-dots-white;
+  background-image: url(../icons/home1.svg);
+  text-align: center;
+  align-items: center;
+  border-radius: 0;
+}
