@@ -25,10 +25,12 @@
   }
   @media screen and (min-width: 768px) {
     width: 768px;
+    padding: 0 36px 0 36px;
   }
 
   @media screen and (min-width: 1280px) {
     width: 1280px;
+    padding: 0 115px 0 115px;
   }
 }
 .gallery__grid {
@@ -37,10 +39,6 @@
   justify-content: center;
   margin-top: -5px;
   margin-left: -5px;
-
-  @media screen and (min-width: 1280px) {
-    padding: 0 115px 0 115px;
-  }
 }
 .gallery__colomn {
   margin-top: 5px;
