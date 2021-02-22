@@ -60,6 +60,7 @@ img {
       padding-left: 115px;
       padding-right: 115px;
       height: 665px;
+      width: 1280px;
     }
   }
 
@@ -194,6 +195,12 @@ img {
     color: #ffffff;
     margin-right: 8px;
 
+    &:hover,
+    &:focus {
+      background-color: #c7133e;
+      cursor: pointer;
+    }
+
     @media (min-width: $width-desktop) {
       font-size: 14px;
       line-height: 1.3;
@@ -215,6 +222,12 @@ img {
 
     background-color: #ffffff;
     color: #d41443;
+
+    &:hover,
+    &:focus {
+      background-color: #ecebeb;
+      cursor: pointer;
+    }
 
     @media (min-width: $width-desktop) {
       font-size: 14px;
@@ -435,16 +448,39 @@ img {
 
 .hero__button-arrow {
   border: none;
-  background-color: transparent;
-  padding-left: 0;
-  padding-right: 0;
+  border-radius: 50%;
+  padding: 0;
+
   margin-top: 7px;
   margin-bottom: 6px;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 18px;
+
+  background-color: $card-button-primary;
+
+  fill: $card-button-light;
+
+  @media (min-width: $width-desktop) {
+    width: 26px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $card-button-accent;
+    cursor: pointer;
+  }
 }
 
-.hero_arrow {
+.hero_svg {
   @media (min-width: $width-desktop) {
     height: 26px;
     width: 26px;
   }
+}
+
+.hero_link {
+  cursor: auto;
 }
