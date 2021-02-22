@@ -1,3 +1,4 @@
+// общие
 ul {
   list-style: none;
   margin-top: 0;
@@ -63,7 +64,10 @@ img {
       width: 1280px;
     }
   }
+}
 
+// заголовок
+.hero {
   &__title {
     font-family: Titan One;
     font-style: normal;
@@ -75,7 +79,7 @@ img {
     text-align: left;
 
     width: 218px;
-    margin-right: auto;
+    margin-left: 0;
     margin-top: 193px;
 
     @media (min-width: $width-tablet) {
@@ -118,12 +122,10 @@ img {
       line-height: 0.91;
     }
   }
+}
 
-  &__main-plane {
-    position: absolute;
-    z-index: 1;
-  }
-
+// главная картинка и круг
+.hero {
   &__circle {
     position: absolute;
     z-index: 0;
@@ -156,6 +158,8 @@ img {
     top: 92px;
     right: 32px;
 
+    transition: all 500ms linear;
+
     @media (min-width: $width-tablet) {
       top: 62px;
       right: 247px;
@@ -170,7 +174,10 @@ img {
       height: 557px;
     }
   }
+}
 
+// кнопки
+.hero {
   &__buttons {
     display: flex;
     margin-top: 19px;
@@ -237,11 +244,11 @@ img {
       font-size: 14px;
       line-height: 1.3;
       padding: 11px 22px;
-      margin-right: 15px;
     }
   }
 }
 
+// дувушка с моржом
 .hero__content-girl {
   @media (max-width: ($width-tablet)-1px) {
     display: none;
@@ -258,7 +265,10 @@ img {
       right: 109px;
     }
   }
+}
 
+// инфо циферки
+.hero {
   &__info {
     @media (max-width: ($width-tablet)-1px) {
       display: none;
@@ -409,6 +419,7 @@ img {
   }
 }
 
+// ковшик
 .hero__content-ladle {
   width: 100%;
   @media (max-width: ($width-tablet)-1px) {
@@ -450,6 +461,7 @@ img {
   }
 }
 
+// стрелочка у ковшика
 .hero__button-arrow {
   border: none;
   border-radius: 50%;
@@ -480,6 +492,13 @@ img {
   }
 }
 
+// вспомогательная дичь
+.hero {
+  &__main-plane {
+    position: absolute;
+    z-index: 1;
+  }
+}
 .hero_svg {
   @media (min-width: $width-desktop) {
     height: 26px;
