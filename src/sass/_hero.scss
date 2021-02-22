@@ -91,7 +91,6 @@ img {
       font-size: $hero-title-size-dsktp;
       line-height: 1.16;
 
-      // margin-right: 888px;
       margin-top: 171px;
       width: 277px;
     }
@@ -153,8 +152,6 @@ img {
     top: 92px;
     right: 32px;
 
-    transition: all 500ms linear;
-
     @media (min-width: $width-tablet) {
       top: 62px;
       right: 247px;
@@ -182,7 +179,7 @@ img {
     }
   }
 
-  &__button-prodacts {
+  &__button {
     border-radius: 20px;
     border: none;
     padding: 7px 15px;
@@ -192,11 +189,13 @@ img {
     font-size: $hero-button-text-size;
     line-height: 1.25;
 
+    transition: all $function-time $function-cubic;
+  }
+
+  &__button-prodacts {
     background-color: $hero-button-bg-color;
     color: $hero-main-text-color;
     margin-right: 8px;
-
-    transition: all $function-time $function-cubic;
 
     &:hover,
     &:focus {
@@ -212,20 +211,9 @@ img {
     }
   }
 
-  &__button {
-    border-radius: 20px;
-    border: none;
-    padding: 7px 15px;
-
-    font-family: $font-family-basic;
-    font-weight: $font-weight-normal;
-    font-size: $hero-button-text-size;
-    line-height: 1.25;
-
+  &__button-how {
     background-color: $color-bg-secondary;
     color: $color-button-text;
-
-    transition: all $function-time $function-cubic;
 
     &:hover,
     &:focus {
@@ -496,4 +484,24 @@ img {
 
 .hero_link {
   cursor: auto;
+}
+
+// анимация мороженки
+.hero__section:hover .hero__main-image {
+  animation: 1.2s ease-in-out normal none 1 running trambling-animation;
+}
+@keyframes trambling-animation {
+  0%,
+  50%,
+  100% {
+    transform: rotate(0deg);
+  }
+  10%,
+  30% {
+    transform: rotate(-10deg);
+  }
+  20%,
+  40% {
+    transform: rotate(10deg);
+  }
 }
