@@ -4,33 +4,13 @@
   display: block;
 }
 .personal-data {
-
-  
-// начало конфликта №1
-  
-//   font-family: 'DM Sans';
-//   font-weight: 500;
-//   font-style: normal;
-
-//   font-size: 14px;
-//   line-height: 1.86;
-//   color: #000;
-
-
-
   font-family: $font-family-basic;
   font-weight: $font-weight-medium;
   font-style: normal;
-
   font-size: $text-size-secondary;
   line-height: 1.86;
   color: $color-text-secondary;
-
-
-//   конец конфликта №1
-
 }
-
 .customer-img {
   margin-left: auto;
   margin-right: auto;
@@ -45,37 +25,11 @@
 .customer-dots {
   width: 4px;
   height: 4px;
-
-
-  
-// начало конфликта №2
-  
-//   background-color: #c7133e;
-//   border-radius: 50%;
-// }
-// .customer-dots:not(:last-child) {
-
-
-
-//   margin-right: 10px;
-
-
   background-color: $color-title-basic;
   border-radius: 50%;
 }
 .customer-dots:not(:last-child) {
   margin-right: 10px;
-
-}
-
-
-
-
-  margin-right: 10px;
-
-// конец конфликта №2
-
-
 }
 body {
   margin: 0;
@@ -103,34 +57,10 @@ ul {
 }
 
 .slider-text {
-
-  
-// +1 конфликт
-//   margin-bottom: 31px;
-// }
-
-
-//   margin-bottom: 31px;
-// конец конфликта
-}
-
-// .slider-text {
-  
-// начало конфликта №3
-  
-//   font-family: 'DM Sans', sans-serif;
-//   font-weight: 500;
-//   font-size: 12px;
-//   color: #000;
-
-
   font-family: $font-family-basic;
   font-weight: $font-weight-medium;
   font-size: $text-size-basic;
   color: $color-text-secondary;
-
-// Конец конфликта №3
-  
   line-height: 2.55;
   padding: 0 18px;
   background-image: repeating-linear-gradient(
@@ -142,7 +72,6 @@ ul {
   position: relative;
   z-index: 2;
 }
-
 .slider-text::before {
   background-image: url('../icons/icon-quotes.svg');
   width: 54px;
@@ -208,54 +137,14 @@ ul {
   .slider-text-wrapper {
     margin-bottom: 15px;
   }
-
   .slider-text {
     font-size: $text-size-tertiary;
     line-height: 1.86;
     padding: 0 4px;
   }
-
-
-// еще конфликт
-
-  .slider-text::before {
-    position: absolute;
-    top: -15px;
-    left: -31px;
-
-
-  //   font-size: 14px;
-  //   line-height: 1.86;
-  //   color: #000;
-  // }
-  .customer-img {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 29px;
-    display: block;
-  }
-  .customer-item-dots {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 18px;
-  }
-  .customer-dots {
-    width: 4px;
-    height: 4px;
-    background-color: #c7133e;
-    border-radius: 50%;
-  }
-  .customer-dots:not(:last-child) {
-    margin-right: 10px;
-// конец конфликта
-
-  }
-}
-
   .slider-text::before {
     position: absolute;
     top: -15px;
     left: -31px;
   }
 }
-

@@ -7,7 +7,6 @@
   font-family: $font-family-basic;
   font-weight: $font-weight-medium;
   font-style: normal;
-
   font-size: $text-size-secondary;
   line-height: 1.86;
   color: $color-text-secondary;
@@ -26,7 +25,6 @@
 .customer-dots {
   width: 4px;
   height: 4px;
-
   background-color: $color-title-basic;
   border-radius: 50%;
 }
@@ -54,6 +52,7 @@ ul {
 .slider-text-wrapper {
   background-color: $slider-text-color;
   padding: 44px 50px 16px;
+
   margin-bottom: 31px;
 }
 
@@ -62,7 +61,6 @@ ul {
   font-weight: $font-weight-medium;
   font-size: $text-size-basic;
   color: $color-text-secondary;
-
   line-height: 2.55;
   padding: 0 18px;
   background-image: repeating-linear-gradient(
@@ -74,7 +72,6 @@ ul {
   position: relative;
   z-index: 2;
 }
-
 .slider-text::before {
   background-image: url('../icons/icon-quotes.svg');
   width: 54px;
@@ -140,13 +137,11 @@ ul {
   .slider-text-wrapper {
     margin-bottom: 15px;
   }
-
   .slider-text {
     font-size: $text-size-tertiary;
     line-height: 1.86;
     padding: 0 4px;
   }
-
   .slider-text::before {
     position: absolute;
     top: -15px;
