@@ -42,7 +42,7 @@ body.modal-open-products-modal {
 .products-label {
   font-family: $font-family-title;
   font-weight: $font-weight-normal;
-  font-size: $lable-size-basic;
+  font-size: $label-size-basic;
   line-height: 1.17;
 
   text-align: center;
@@ -51,12 +51,12 @@ body.modal-open-products-modal {
   color: $color-text-tertiary;
 
   @media screen and(min-width: 768px) {
-    font-size: $lable-size-secondary;
+    font-size: $label-size-secondary;
     line-height: 1.15;
   }
 
   @media screen and(min-width: 1280px) {
-    font-size: $lable-size-tertiary;
+    font-size: $label-size-tertiary;
     line-height: 1.13;
   }
 }
