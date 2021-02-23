@@ -81,18 +81,6 @@
     min-height: 280px;
     min-width: 280px;
     height: auto;
-
-    // background-image: url(../images/about-cow-280.png);
-    // background-color: $color-bg-primary;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center;
-
-    // @media screen and (min-device-pixel-ratio: 2),
-    //     screen and (min-resolution: 192dpi),
-    //     screen and (min-resolution: 2dppx) {
-    //         background-image: url('../images/about-cow-560-@2x.png');
-    //     }
   }
 }
 // правая секция с текстом
@@ -116,7 +104,7 @@
     line-height: 1.58;
   }
 }
-// кнопка
+// кнопка 'read more'
 .about {
   &-button {
     display: flex;
@@ -163,16 +151,6 @@
       min-width: 280px;
       width: 100%;
       height: auto;
-
-      // background-image: url(../images/about-cow-280.png);
-      // background-color: $color-bg-primary;
-      // background-size: contain;
-
-      // @media screen and (min-device-pixel-ratio: 2),
-      // screen and (min-resolution: 192dpi),
-      // screen and (min-resolution: 2dppx) {
-      //     background-image: url('../images/about-cow-560-@2x.png');
-      // }
     }
   }
 }
@@ -207,16 +185,6 @@
     &-image-link {
       min-width: 340px;
       min-height: 340px;
-
-      // background-image: url(../images/about-cow-340.png);
-      // background-color: $color-bg-primary;
-      // background-size: contain;
-
-      // @media screen and (min-device-pixel-ratio: 2),
-      // screen and (min-resolution: 192dpi),
-      // screen and (min-resolution: 2dppx) {
-      //     background-image: url('../images/about-cow-680-@2x.png');
-      // }
     }
     &-item-position {
       padding: 0;
@@ -269,16 +237,6 @@
     &-image-link {
       min-width: 516px;
       min-height: 516px;
-
-      // background-image: url(../images/about-cow-516.png);
-      // background-color: $color-bg-primary;
-      // background-size: contain;
-
-      // @media screen and (min-device-pixel-ratio: 2),
-      // screen and (min-resolution: 192dpi),
-      // screen and (min-resolution: 2dppx) {
-      //     background-image: url('../images/about-cow-1032-@2x.png');
-      // }
     }
     &-item + .about-item {
       margin-left: 74px;
@@ -334,18 +292,18 @@
   max-width: 440px;
   background-color: $color-bg-primary;
   transform: translate(-50%, -50%) scale(1);
-}
-.about-modal::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: -100px;
-  transform: translateX(-50%);
-  width: 149px;
-  height: 152px;
-  background-size: cover;
-  background-position: top;
-  background-image: url(../images/products/products-pic1.png);
+  &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -70px;
+    transform: translateX(-50%);
+    width: 149px;
+    height: 152px;
+    background-size: cover;
+    background-position: top;
+    background-image: url(../images/products/products-pic1.png);
+  }
 }
 .about-close-button {
   display: flex;
@@ -363,6 +321,9 @@
   transition: transform $function-cubic $function-time;
   z-index: 5;
 
+  &-icon-cross {
+    fill: #d41342;
+  }
   &:hover,
   &:focus {
     background-color: $color-button-bg-dark;
@@ -371,9 +332,6 @@
   &:focus .about-icon-cross {
     fill: $color-button-bg-light;
   }
-}
-.about-icon-cross {
-  fill: #d41342;
 }
 .about-form-field-list {
   list-style: none;
@@ -428,4 +386,45 @@
   height: 20px;
   width: 20px;
   margin-left: 10px;
+}
+body.modal-open-about-modal {
+  overflow: hidden;
+}
+
+// стрелка прокрутки вверх
+#arrow-up {
+  display: inline-block;
+  background-color: #d41443;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+
+  &::after {
+    content: '\f077';
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: #333;
+  }
+  &:active {
+    background-color: #555;
+  }
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
 }
