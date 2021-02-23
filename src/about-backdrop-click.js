@@ -12,10 +12,11 @@
 
     function toggleModal() {
         refs.backdrop.classList.toggle("is-hidden");
+        document.body.classList.toggle("modal-open-about-modal");
     }
 
     function logBackdropClick() {
         console.log("Это клик в бекдроп");
     }
 
-  })();
+})();

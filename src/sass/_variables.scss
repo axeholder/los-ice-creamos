@@ -2,6 +2,9 @@ $width-mobile: 480px;
 $width-tablet: 768px;
 $width-desktop: 1280px;
 
+$width-to-tablet: 767px;
+$width-to-desktop: 1279px;
+
 $function-cubic: cubic-bezier(0.4, 0, 0.2, 1);
 $function-time: 250ms;
 
@@ -43,26 +46,17 @@ $color-text-tertiary: #ffa5ba;
 $color-bg-primary: #fff5f6;
 $color-bg-secondary: #ffffff;
 
-// $color-accent:
 
 $color-border: #e1e1e1;
 
-// Конфликт №1
-// $color-button-text: #D41443;
-
-// $color-button-bg-light: #ffffff;
-// $color-button-bg-medium: #ECEBEB;
-// $color-button-bg-dark: #d41342;
 
 $color-button-text: #d41443;
-
 $color-button-bg-light: #ffffff;
 $color-button-bg-medium: #ecebeb;
 
 $color-button-bg-dark: #d41342;
 
-$color-border: #e1e1e1;
-// конуц конфликта №1
+
 
 $color-bg-icon: #fea5bb;
 
@@ -77,6 +71,7 @@ $font-size-products-card-tittle-desktop: 30px;
 $products-card-text-white: #ffffff;
 $card-dots-white: #ffffff;
 $card-button-primary: #ffa5ba;
+
 $card-button-light: #ffffff;
 $card-button-accent: #c7133e;
 
@@ -87,3 +82,31 @@ $slider-active-dots-color: #d31342;
 
 $card-button-light: #ffffff;
 $card-button-accent: #c7133e;
+
+
+// menu
+$bg-color-backdrop-menu: rgba(0, 0, 0, 0.2);
+$bg-color-menu-container: #e17992;
+$border-color-site-nav: #e18298;
+$color-hover-link: #d41443;
+
+$shadow-buy-button: rgba(212, 20, 67, 0.1);
+
+// hero_variables
+
+$hero-bg-color: #ffb8ca;
+$hero-sec-bg-color: #ffa5ba;
+$hero-trip-bg-color: #ffffff;
+$hero-button-bg-color: #d41443;
+
+$hero-button-text-size: 8px;
+
+$hero-main-text-color: #ffffff;
+
+$hero-title-size-tab: 22px;
+$hero-title-size-dsktp: 38px;
+
+$hero-info-font-size: 28px;
+$hero-sec-info-font-size: 46px;
+
+
