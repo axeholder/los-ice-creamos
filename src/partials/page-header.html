@@ -2,10 +2,19 @@
 	<div class="container-header">
 		<nav>
 			<!-- Лого -->
-			<a class="logo" href="./index.html"><img src="./images/logo.png" alt="Логотип мороженного"></a>
+			<a class="container-logo" href="">
+				<div class="logo">
+					<svg class="icecream_logo" width="50" height="50">
+						<use href="./images/sprite-header.svg#ice-cream"></use>
+					</svg>
+				</div>
+				<span class="logo-text upcase">icecream</span>
+			</a>
+			<!-- Альтернатива с макета -->
+			<!-- <a class="logo" href="./index.html"><img src="./images/logo.png" alt="Логотип мороженного"></a> -->
 			<div class="menu">
-				<!-- Кнопка Купить сейчас для планшета -->
-				<button class="buy-button">
+				<!-- Кнопка Купить сейчас для планшета и десктопа-->
+				<button class="buy-button" type="button" data-buy-open-modall>
 					<span class="buy-button__text">Buy now</span>
 					<svg class="buy-button__icon">
 						<use href="./images/sprite-header.svg#icon-arrow-point-to-right"></use>
@@ -13,20 +22,20 @@
 				</button>
 				<!-- Кнопка открытия меню -->
 				<button class="menu-open" type="button" aria-controls="backdrop-menu" data-menu-open>
-					<svg class="icons" width="20" height="14" aria-label="Открытие мобильного меню">
-						<use class="icon-menu" href="./images/sprite-header.svg#menu"></use>
+					<svg class="icon-menu" width="25" height="25" aria-label="Открытие мобильного меню">
+						<use href="./images/sprite-header.svg#menu"></use>
 					</svg>
 				</button>
 				<!-- Блок меню -->
 				<div class="backdrop-menu" data-menu menu-close>
 					<div id="menu-container" class="menu-container" >
 						<button class="menu-close" type="button" aria-controls="backdrop-menu" data-menu-close>
-							<svg class="icons" width="20" height="14" aria-label="Закрытие мобильного меню">
-								<use class="icon-close" href="./images/sprite-header.svg#close"></use>
+							<svg class="icon-close" width="20" height="20" aria-label="Закрытие мобильного меню">
+								<use href="./images/sprite-header.svg#close"></use>
 							</svg>
 						</button>
 						<!-- Кнопка Купить сейчас -->
-						<button class="menu-container__buy-button">
+						<button class="menu-container__buy-button" data-buy-open-modal>
 							<span class="buy-button__text">Buy now</span>
 							<svg class="buy-button__icon">
 								<use href="./images/sprite-header.svg#icon-arrow-point-to-right"></use>
@@ -54,5 +63,51 @@
 				</div>
 			</div>
 		</nav>
+		<div class="about-backdrop is-hidden" data-buy-backdrop>
+			<div class="about-modal">
+				<button class="about-close-button" type="button" data-buy-close-modal>
+					<svg class="about-icon-close" height="20" aria-label="Кнопка закрытия модального окна">
+						<use class="about-icon-cross" href="./icons/symbol-defs.svg#icon-cross"></use>
+					</svg>
+				</button>
+				<!-- <h3 class="about-item-title">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.</h3> -->
+				<p class="about-item-text">Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus
+					orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras
+					massa nibh, tincidunt.</p>
+				<p class="about-item-text">Aliquam erat volutpat. Aenean accumsan.</p>
+		
+				<form class="about-modal-window-form js-speaker-form">
+					<ul class="about-form-field-list">
+		
+						<li class="about-field">
+							<label for="name">
+								<span class="about-field-text">Name</span>
+								<input type="text" name="name" placeholder="Ilon Mask" />
+							</label>
+						</li>
+		
+						<li class="about-field">
+							<label for="tel">
+								<span class="about-field-text">Phone</span>
+								<input type="tel" name="tel" placeholder="+38 050 123 45 67" />
+							</label>
+						</li>
+		
+						<li class="about-field">
+							<label for="email">
+								<span class="about-field-text">E-mail</span>
+								<input type="email" name="email" placeholder="mail@me.com" />
+							</label>
+						</li>
+		
+					</ul>
+					<button class="about-button modal-submit" type="submit">Send
+						<svg class="about-icon-send">
+							<use href="./icons/symbol-defs.svg#icon-ice-cream"></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+		</div>
 	</div>
 </header>
