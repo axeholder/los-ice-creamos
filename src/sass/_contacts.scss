@@ -817,7 +817,7 @@ iframe {
   @media (min-width: 1023px) {
     &-input-field,
     &-feedback {
-      width: 448px;
+      max-width: 448px;
     }
   }
 }
