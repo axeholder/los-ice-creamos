@@ -1,6 +1,6 @@
 // заглавие по секции about
 .about {
-  &-lable-title {
+  &-label-title {
     display: block;
     margin-bottom: 26px;
     text-align: center;
@@ -8,7 +8,7 @@
 
     font-family: $font-family-title;
     font-weight: $font-weight-normal;
-    font-size: $lable-size-basic;
+    font-size: $label-size-basic;
     line-height: 1.17;
     text-transform: uppercase;
   }
@@ -107,6 +107,7 @@
 // кнопка 'read more'
 .about {
   &-button {
+    outline: none;
     display: flex;
     align-items: center;
     margin-top: 30px;
@@ -163,8 +164,8 @@
       padding-top: 130px;
       background-image: none;
     }
-    &-lable-title {
-      font-size: $lable-size-secondary;
+    &-label-title {
+      font-size: $label-size-secondary;
       line-height: 1.15;
     }
     &-title {
@@ -220,9 +221,9 @@
         background-image: url(../images/about-bg-2560-@2x.png);
       }
     }
-    &-lable-title {
+    &-label-title {
       margin-bottom: 15px;
-      font-size: $lable-size-tertiary;
+      font-size: $label-size-tertiary;
       line-height: 1.13;
     }
     &-title {
@@ -309,6 +310,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  outline: none;
   border-radius: 50%;
   height: 20px;
   width: 20px;
@@ -341,6 +343,7 @@
 .about-field {
   display: block;
   position: relative;
+  outline: none;
   margin-bottom: 10px;
   transition: $function-time $function-cubic;
   &:last-child {
@@ -366,12 +369,14 @@
 
   &:focus-within input,
   &:hover input {
+    // outline: none;
     border-color: $color-button-bg-dark;
     cursor: pointer;
   }
 }
 .about-button.modal-submit {
   margin-top: 20px;
+  outline: none;
   justify-content: center;
   margin: 0 auto;
   &:hover,
@@ -394,7 +399,7 @@ body.modal-open-about-modal {
 // стрелка прокрутки вверх
 #arrow-up {
   display: inline-block;
-  background-color: #d41443;
+  background-color: rgb(212, 19, 66, 50%);
   width: 50px;
   height: 50px;
   text-align: center;
@@ -405,7 +410,7 @@ body.modal-open-about-modal {
   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   opacity: 0;
   visibility: hidden;
-  z-index: 1000;
+  z-index: 4;
 
   &::after {
     content: '\f077';
@@ -418,7 +423,7 @@ body.modal-open-about-modal {
   }
   &:hover {
     cursor: pointer;
-    background-color: #333;
+    background-color: #d41342;
   }
   &:active {
     background-color: #555;
