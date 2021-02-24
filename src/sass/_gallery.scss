@@ -27,10 +27,16 @@
 }
 .gallery__grid {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin-top: -5px;
   margin-left: -5px;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 768px) {
+  }
 }
 .gallery__item {
   display: block;
@@ -43,14 +49,12 @@
   cursor: pointer;
   outline: none;
   @media screen and (max-width: 479px) {
-    width: 35px;
+    width: 65px;
   }
   @media screen and (min-width: 480px) {
-    width: 50px;
-  }
-  @media screen and (min-width: 768px) {
     width: 90px;
   }
+
   @media screen and (min-width: 1280px) {
     width: 145px;
   }
@@ -61,19 +65,35 @@
 }
 .gallery__item-big {
   @media screen and (max-width: 479px) {
-    width: 70px;
+    width: 130px;
   }
   @media screen and (min-width: 480px) {
-    width: 100px;
-  }
-  @media screen and (min-width: 768px) {
     width: 180px;
   }
   @media screen and (min-width: 1280px) {
     width: 290px;
   }
 }
+.gallery__item-top {
+  @media screen and (max-width: 767px) {
+    align-self: flex-start;
+  }
+}
+.gallery__item-end {
+  @media screen and (max-width: 767px) {
+    align-self: flex-end;
+    margin-bottom: 30px;
+  }
+}
+.gallery__colomn-mobtop {
+  @media screen and (max-width: 767px) {
+    margin-top: -60px;
+  }
+}
+
 .gallery__colomn-top {
-  align-self: flex-start;
-  padding-top: 20px;
+  @media screen and (min-width: 768px) {
+    align-self: flex-start;
+    padding-top: 20px;
+  }
 }
