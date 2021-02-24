@@ -42,18 +42,18 @@ button:active {
   color: #d41443;
 }
 
-button::after {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.6s;
-}
+// button::after {
+//   content: '';
+//   display: inline-block;
+//   height: 100%;
+//   width: 100%;
+//   border-radius: 100px;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: -1;
+//   transition: all 0.6s;
+// }
 
 .button-red::after {
   background-color: rgba(212, 20, 68, 0.6);
