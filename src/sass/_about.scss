@@ -321,7 +321,7 @@
 
   background-color: transparent;
   transition: transform $function-cubic $function-time;
-  z-index: 5;
+  // z-index: 5;
 
   &-icon-cross {
     fill: #d41342;
@@ -364,6 +364,7 @@
   }
   & textarea::placeholder {
     font-size: 11px;
+    font-family: $font-family-basic;
     color: rgba(117, 117, 117, 0.5);
   }
 
@@ -395,6 +396,10 @@
 body.modal-open-about-modal {
   overflow: hidden;
 }
+.about-field-text {
+  font-family: $font-family-basic;
+  color: $color-text-basic;
+}
 
 // стрелка прокрутки вверх
 #arrow-up {
@@ -410,7 +415,7 @@ body.modal-open-about-modal {
   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   opacity: 0;
   visibility: hidden;
-  z-index: 4;
+  z-index: 3;
 
   &::after {
     content: '\f077';
