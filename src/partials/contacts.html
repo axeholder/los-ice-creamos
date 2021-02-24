@@ -1,5 +1,6 @@
 <section class="contacts" id="contacts">
   <h2 class="visually-hidden">Contacts</h2>
+<!-- ============================================================================ -->
   <div class="contacts-container">
     <div class="contacts-card-list">
       <div class="contacts-card">
@@ -87,18 +88,19 @@
         </ul>
       </div>
     </div>
+<!-- ============================================================================ -->
     <div class="contacts-buttons">
       <button
-        class="contacts-button contacts-button-locations"
+        class="contacts-button contacts-button-locations button-red"
         id="location"
         data-modal-map-open
       >
-        <span class="contacts-button-text">Our Locations</span>
+        <span class="contacts-button-text button-red">Our Locations</span>
         <svg class="contacts-icon contacts-icon-white">
           <use href="./icons/symbol-defs.svg#icon-arrow-point-to-right"></use>
         </svg>
       </button>
-      <button class="contacts-button contacts-button-franchise" data-modal-franchise-open>
+      <button class="contacts-button contacts-button-franchise button-white" data-modal-franchise-open>
         <span class="contacts-button-text">Franchise</span>
         <svg class="contacts-icon contacts-icon-red">
           <use href="./icons/symbol-defs.svg#icon-arrow-point-to-right"></use>
@@ -106,29 +108,31 @@
       </button>
     </div>
   </div>
-  <div class="contacts-backdrop contacts-backdrop-hidden" id="map" data-modal-map>
+<!-- ============================================================================ -->
+  <div class="location-backdrop location-backdrop-hidden" id="map" data-modal-map>
     <span class="whirly-loader map-text" id="map-text">Loading&#8230;</span>
-    <div class="map-block" id="map-block">
-      <div class="location-buttons">
-        <button class="location-button" id="button-new-york">New York</button>
-        <button class="location-button" id="button-chicago">Chicago</button>
-        <button class="location-button" id="button-los-angeles">
+    <div class="map-block modal-box-open" id="map-block" >
+      <button class="location-buttons button-white" id="open-list" open-location-button>open</button>
+      <div class="location-button-list location-button-list-open" open-location-list>
+        <button class="location-button button-white" id="button-new-york" location-button-ny>New York</button>
+        <button class="location-button button-white" id="button-chicago" location-button-ch>Chicago</button>
+        <button class="location-button button-white" id="button-los-angeles" location-button-la>
           Los Angeles
         </button>
       </div>
-      <button class="modal-close-button" data-modal-map-close>
-        <svg class="modal-close-icon">
+      <button class="map-close-button button-white" data-modal-map-close>
+        <svg class="map-close-icon">
           <use href="./icons/symbol-defs.svg#icon-cross"></use>
         </svg>
       </button>
     </div>
   </div>
-  <!-- ====================================== -->
+<!-- ====================================== -->
   <div class="franchise-backdrop franchise-backdrop-hidden" data-modal-franchise>
-        <div class="franchise-backdrop-container">
-            <button class="modal-close-button" data-modal-franchise-close> 
+        <div class="franchise-backdrop-container modal-box-open" franshise-box>
+            <button class="modal-close-button button-white" data-modal-franchise-close> 
   <svg class="modal-close-icon">
-                    <use href="./icons/symbol-defs.svg#icon-close"></use>
+                    <use href="./icons/symbol-defs.svg#icon-cross"></use>
                 </svg>
   </button>
            <h2 class="modal-caption">Egredere de details, nos vocant vos</h2>
@@ -187,9 +191,9 @@
                         </div>
                     </label>
                 </div>
-                <button class="modal-send-button">Mittere nuntium</button>
+                <button class="modal-send-button button-red">Mittere nuntium</button>
             </form>
          </div>
   </div> 
-  <!-- ====================================== -->
+<!-- ============================================================================ -->
 </section>
