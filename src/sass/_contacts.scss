@@ -31,6 +31,45 @@ li {
   list-style: none;
 }
 
+/* =======================
+     Button animation
+======================= */
+
+/* Начало анимации кнопок */
+.button-animated-in {
+  animation: moveInBottom 1s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.button-animated-out {
+  animation: moveInTop 1s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInTop {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+/* Конец анимации кнопок */
+
 .contacts-container {
   display: flex;
   flex-direction: column;
@@ -217,28 +256,6 @@ li {
     outline: none;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   }
-
-  &-button-locations {
-    background: #d41342;
-    color: #ffffff;
-    margin-bottom: 10px;
-  }
-
-  &-button-locations:hover,
-  &-button-locations:focus {
-    background: #c8133f;
-    margin-bottom: 10px;
-  }
-
-  &-button-franchise {
-    background: #ffffff;
-    color: #d41443;
-  }
-
-  &-button-franchise:hover,
-  &-button-franchise:focus {
-    background: #ecebeb;
-  }
 }
 
 .contacts-icon {
@@ -256,7 +273,7 @@ li {
 }
 
 /* Задается тёмный фон после открытия модального окна */
-.contacts-backdrop {
+.location-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -270,41 +287,49 @@ li {
 }
 
 /* Скрывается модальное окно */
-.contacts-backdrop-hidden {
+.location-backdrop-hidden {
   opacity: 0;
   pointer-events: none;
 }
-// ============================
-.close-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  height: 20px;
-  width: 20px;
-  margin: 0 0 10px auto;
 
-  cursor: pointer;
-  border: 1px solid $color-button-bg-dark;
-
-  background-color: transparent;
-  transition: transform $function-cubic $function-time;
-  z-index: 5;
-
-  &:hover,
-  &:focus {
-    background-color: $color-button-bg-dark;
-  }
-  &:hover .icon-cross,
-  &:focus .icon-cross {
-    fill: $color-button-bg-light;
-  }
+.location-button-list-open {
+  opacity: 0;
+  pointer-events: none;
 }
+
+// ============================
+// .close-button {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   border-radius: 50%;
+//   height: 20px;
+//   width: 20px;
+//   margin: 0 0 10px auto;
+
+//   border: 1px solid $color-button-bg-dark;
+
+//   background-color: transparent;
+//   transition: transform $function-cubic $function-time;
+//   z-index: 5;
+
+//   &:hover,
+//   &:focus {
+//     background-color: $color-button-bg-dark;
+//   }
+//   &:hover .icon-cross,
+//   &:focus .icon-cross {
+//     fill: $color-button-bg-light;
+//   }
+// }
+
 .icon-cross {
   fill: #d41342;
 }
 // ============================
-.modal-close-button {
+.map-close-button,
+.modal-close-button,
+.location-buttons {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -320,28 +345,34 @@ li {
   border-radius: 50%;
   transition-property: fill;
   transition-duration: 250ms;
-  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
-    background-color: $color-button-bg-dark;
+    background-color: #d41342;
   }
 }
 
+.location-buttons {
+  top: 8px;
+  right: 48px;
+}
+
+.map-close-icon,
 .modal-close-icon {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   fill: #d41342;
   transition-property: fill;
   transition-duration: 250ms;
-  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
-    fill: $color-button-bg-light;
+    fill: #fff;
   }
 }
 
@@ -360,6 +391,7 @@ li {
   transform: translate(-50%, -50%);
   width: 90%;
   height: 90%;
+  overflow: hidden;
   margin: 0 auto;
   border-radius: 15px;
   background-color: #e5e3df;
@@ -375,25 +407,17 @@ li {
   z-index: 2;
 }
 
-.location-buttons {
+.location-button-list {
   display: flex;
   flex-direction: column;
   position: absolute;
   top: 50px;
   right: 8px;
-  z-index: 3;
-
-  @media screen and (min-width: 767px) {
-    flex-direction: row;
-  }
-
-  // @media screen and (min-width: 1279px) {
-
-  // }
 }
 
 .location-button {
-  font-size: 18px;
+  position: relative;
+  font-size: 12px;
   font-weight: bold;
   line-height: 1.32em;
   text-align: center;
@@ -401,6 +425,7 @@ li {
   border-radius: 30px;
   border: 1px solid transparent;
   padding: 0 16px;
+  opacity: 1;
 
   &:not(:last-child) {
     margin-bottom: 10px;
@@ -410,11 +435,6 @@ li {
     font-size: 14px;
     height: 30px;
     border-radius: 22px;
-
-    &:not(:last-child) {
-      margin-bottom: 0;
-      margin-right: 10px;
-    }
   }
 }
 
@@ -719,37 +739,6 @@ iframe {
     fill: #d41443;
   }
 
-  &-close-button {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
-    padding: 10px;
-    text-align: center;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
-  }
-
-  &-close-icon {
-    position: absolute;
-    width: 11px;
-    height: 11px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    fill: #d41443;
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: ease;
-  }
-
-  &-close-button:hover &-close-icon,
-  &-close-button:focus &-close-icon {
-    fill: #fff;
-  }
-
   &-checkbox {
     position: relative;
     font-size: 14px;
@@ -810,38 +799,27 @@ iframe {
   }
 
   &-send-button {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    display: block;
+    position: relative;
     min-width: 200px;
     max-height: 50px;
     font-size: 16px;
     line-height: 1.875em;
     letter-spacing: 0.06em;
     text-align: center;
-    cursor: pointer;
-    background-color: #d41443;
-    color: #fff;
     border: 1px solid transparent;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 22px;
     padding: 10px 32px;
-    // transition-property: background-color;
-    // transition-duration: $animation-duration;
-    // transition-timing-function: $animation-type;
+    margin: 0 auto;
   }
 
-  &-send-button:hover,
-  &-send-button:focus {
-    background-color: #e17992;
+  @media (min-width: 1023px) {
+    &-input-field,
+    &-feedback {
+      width: 448px;
+    }
   }
-
-  // @media (min-width: 1023px) {
-  //   &-input-field,
-  //   &-feedback {
-  //     width: 448px;
-  //   }
-  // }
 }
 
 /* Задается тёмный фон после открытия модального окна */
@@ -855,7 +833,7 @@ iframe {
   z-index: 10;
   transition-property: all;
   transition-duration: 250ms;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Стиль модального окна */
   &-container {

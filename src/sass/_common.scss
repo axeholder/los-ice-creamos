@@ -15,3 +15,61 @@ img {
   margin: 0px;
   list-style: none;
 }
+
+/* =======================
+     Button animation
+======================= */
+
+/* Начало анимации кнопок */
+button:hover,
+button:focus {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+}
+
+button:active {
+  transform: translateY(-1px);
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+}
+
+.button-red {
+  background-color: #d41443;
+  color: #fff;
+}
+
+.button-white {
+  background-color: #fff;
+  color: #d41443;
+}
+
+// button::after {
+//   content: '';
+//   display: inline-block;
+//   height: 100%;
+//   width: 100%;
+//   border-radius: 100px;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: -1;
+//   transition: all 0.6s;
+// }
+
+.button-red::after {
+  background-color: rgba(212, 20, 68, 0.6);
+}
+
+.button-white::after {
+  background-color: #fff;
+}
+
+button:hover::after,
+button:focus::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+/* Конец анимации кнопок */
+button {
+  outline: none;
+  cursor: pointer;
+}

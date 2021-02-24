@@ -69,7 +69,7 @@ img {
   &__title {
     font-family: $font-family-title;
     font-weight: $font-weight-normal;
-    font-size: $lable-size-secondary;
+    font-size: $label-size-secondary;
     line-height: 1.15;
     letter-spacing: $font-spacing-basic;
     text-transform: uppercase;
@@ -451,6 +451,8 @@ img {
   align-items: center;
   width: 18px;
 
+  cursor: pointer;
+
   background-color: $card-button-primary;
 
   fill: $card-button-light;
@@ -464,7 +466,6 @@ img {
   &:hover,
   &:focus {
     background-color: $card-button-accent;
-    cursor: pointer;
   }
 }
 
