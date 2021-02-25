@@ -362,15 +362,14 @@
     border-radius: 8px;
     width: 80%;
   }
-  & textarea::placeholder {
-    font-size: 11px;
+  & input::placeholder {
+    font-size: 12px;
     font-family: $font-family-basic;
-    color: rgba(117, 117, 117, 0.5);
+    color: $color-text-basic;
   }
 
   &:focus-within input,
   &:hover input {
-    // outline: none;
     border-color: $color-button-bg-dark;
     cursor: pointer;
   }
