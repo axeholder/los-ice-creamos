@@ -7,16 +7,16 @@
                 <a class="about-image-link" href="/">
                     
                     <picture>
-                        <source srcset="./images/about-cow-280.png 1x, ./images/about-cow-560-@2x.png 2x" 
+                        <source srcset="./images/about/about-cow-280.png 1x, ./images/about/about-cow-560-@2x.png 2x" 
                         media="(max-width: 320px)" />
                     
-                        <source srcset="./images/about-cow-340.png 1x, ./images/about-cow-680-@2x.png 2x" 
+                        <source srcset="./images/about/about-cow-340.png 1x, ./images/about/about-cow-680-@2x.png 2x" 
                         media="(min-width: 321px) and (max-width: 768px)" />
                     
-                        <source srcset="./images/about-cow-516.png 1x, ./images/about-cow-1032-@2x.png 2x" 
+                        <source srcset="./images/about/about-cow-516.png 1x, ./images/about/about-cow-1032-@2x.png 2x" 
                         media="(min-width: 769px)" />
                     
-                        <img class="about-image" src="./images/about-cow-516.png" alt="Корова с молоком" />
+                        <img class="about-image" src="./images/about/about-cow-516.png" alt="Корова с молоком" />
                     
                     </picture>
 
@@ -49,24 +49,18 @@
                             <ul class="about-form-field-list">
                                 
                                 <li class="about-field">
-                                    <label for="name">
-                                        <span class="about-field-text">Name</span>
-                                        <input type="text" name="name" placeholder="Ilon Mask" />
-                                    </label>
+                                    <label class="about-field-text" for="about-name">Name</label>
+                                    <input type="text" id="about-name" name="name" placeholder="Ilon Mask" />
                                 </li>
                                 
                                 <li class="about-field">
-                                    <label for="tel">
-                                        <span class="about-field-text">Phone</span>
-                                        <input type="tel" name="tel" placeholder="+38 050 123 45 67"/>
-                                    </label>
+                                    <label class="about-field-text" for="about-tel">Phone</label>
+                                    <input type="tel" id="about-tel" name="tel" placeholder="+38 0** *** ** **" />
                                 </li>
                                 
                                 <li class="about-field">
-                                    <label for="email">
-                                        <span class="about-field-text">E-mail</span>
-                                        <input type="email" name="email" placeholder="mail@me.com"/>
-                                    </label>
+                                    <label class="about-field-text" for="about-email">E-mail</label>
+                                    <input type="email" name="email" id="about-email" placeholder="mail@me.com" />
                                 </li>
                                 
                             </ul>
@@ -84,7 +78,7 @@
         </ul>
 
         <!-- стрелочка прокрутки вверх -->
-        <a id="arrow-up"></a>
+        <a id="arrow-up" href="#main"></a>
 
     </div>
 </section>
