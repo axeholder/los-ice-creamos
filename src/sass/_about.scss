@@ -34,7 +34,7 @@
     min-width: 320px;
     width: 100%;
 
-    background-image: url(../images/about-bg-320.png);
+    background-image: url(../images/about/about-bg-320.png);
     background-color: $color-bg-primary;
     background-repeat: no-repeat;
     background-size: cover;
@@ -43,7 +43,7 @@
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url('../images/about-bg-640-@2x.png');
+      background-image: url('../images/about/about-bg-640-@2x.png');
     }
   }
   &-container {
@@ -61,18 +61,10 @@
   &-item + .about-item {
     margin-top: 47px;
   }
-  &-list {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-  }
 }
 // левая секция с картинкой
 .about {
   &-image {
-    display: block;
-    height: auto;
-    max-width: 100%;
     margin: 0 auto;
   }
   &-image-link {
@@ -96,7 +88,7 @@
   }
   &-item-text {
     color: $color-text-basic;
-    margin: 35px 0 0 0;
+    margin: 30px 0 0 0;
 
     font-family: $font-family-basic;
     font-weight: $font-weight-medium;
@@ -131,6 +123,7 @@
       background-color: $color-button-bg-medium;
       cursor: pointer;
       transition: $function-cubic $function-time;
+      border: 1px solid transparent;
     }
   }
   &-button-arrow {
@@ -213,12 +206,12 @@
     }
     &-section {
       padding-top: 125px;
-      background-image: url(../images/about-bg-1280.png);
+      background-image: url(../images/about/about-bg-1280.png);
 
       @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
-        background-image: url(../images/about-bg-2560-@2x.png);
+        background-image: url(../images/about/about-bg-2560-@2x.png);
       }
     }
     &-label-title {
@@ -321,7 +314,6 @@
 
   background-color: transparent;
   transition: transform $function-cubic $function-time;
-  // z-index: 5;
 
   &-icon-cross {
     fill: #d41342;
@@ -341,11 +333,14 @@
   margin: 30px 0 0 0;
 }
 .about-field {
-  display: block;
+  display: flex;
   position: relative;
   outline: none;
   margin-bottom: 10px;
   transition: $function-time $function-cubic;
+  align-items: center;
+  height: 30px;
+
   &:last-child {
     margin-bottom: 25px;
   }
@@ -357,20 +352,25 @@
     position: absolute;
     top: 0;
     left: 60px;
-    padding: 5px;
-    border: 1px solid $color-border;
+    padding-left: 5px;
+    border: 2px solid $color-border;
     border-radius: 8px;
     width: 80%;
-  }
-  & textarea::placeholder {
-    font-size: 11px;
+    height: 100%;
     font-family: $font-family-basic;
-    color: rgba(117, 117, 117, 0.5);
+    outline: none;
+    &:invalid {
+      border-color: red;
+    }
+  }
+  & input::placeholder {
+    font-size: 12px;
+    font-family: $font-family-basic;
+    color: $color-text-basic;
   }
 
   &:focus-within input,
   &:hover input {
-    // outline: none;
     border-color: $color-button-bg-dark;
     cursor: pointer;
   }
@@ -384,6 +384,7 @@
   &:focus {
     background-color: $color-button-bg-medium;
     cursor: pointer;
+    border: 1px solid transparent;
     transition: $function-cubic $function-time;
   }
 }
